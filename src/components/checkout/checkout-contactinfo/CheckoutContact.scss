@@ -1,0 +1,128 @@
+@import "../../../Css/mixins";
+
+.checkout__contact {
+  display: block;
+  width: 83.5%;
+  margin: auto;
+  padding: var(--unnamed-size-20) 0;
+
+  .checkout__contact_label {
+    color: var(--gray-d2);
+    font-size: var(--unnamed-size-16);
+  }
+  .checkout__guest_title {
+    font: normal normal 600 36px/30px Source Serif Pro;
+    margin: var(--unnamed-size-6) 0;
+  }
+  .checkout__info_title {
+    font-size: var(--unnamed-size-20);
+  }
+  .checkout__info_desc {
+    font-size: var(--unnamed-size-16);
+    margin: 5px 0;
+  }
+  .form__input_grp {
+    input[type="text"] {
+      width: 100%;
+      padding: var(--unnamed-size-6) var(--unnamed-size-2);
+      margin: var(--unnamed-size-6) 0;
+      border: var(--unnamed-size-2) solid var(--gray-l2);
+      border-radius: 8px;
+    }
+  }
+  .country__dropdown,
+  .state__dropdown {
+    width: 100%;
+    padding: var(--unnamed-size-6) var(--unnamed-size-2);
+    margin: 5px 0;
+    border: var(--unnamed-size-2) solid var(--gray-l2);
+    border-radius: 8px;
+  }
+  .checkout__contact_submitbtn {
+    display: block;
+    margin: auto;
+    color: var(--primary-brand);
+    text-align: center;
+    border: var(--unnamed-size-2) solid var(--primary-brand);
+    background: transparent;
+    padding: 8px 50px;
+    margin-top: var(--unnamed-size-10);
+    text-transform: uppercase;
+    &:hover {
+      border: 2px solid var(--primary-d1);
+      color: var(--primary-m1);
+      cursor: pointer;
+    }
+  }
+  .checkout__other_option {
+    padding: var(--unnamed-size-20) 0;
+    p {
+      padding: 15px 10px;
+      box-shadow: 0px 0px 0px 1px var(--gray-l1);
+      color: var(--gray-m1);
+    }
+  }
+  .checkout__login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: var(--unnamed-size-20);
+    box-shadow: 0px 0px 0px 1px var(--gray-l1);
+    margin-bottom: var(--unnamed-size-20);
+    .checkout__login_btn {
+      background: transparent;
+      border: 2px solid var(--primary-brand);
+      color: var(--primary-brand);
+      &:hover {
+        border: 2px solid var(--primary-d1);
+        color: var(--primary-d1);
+        cursor: pointer;
+      }
+    }
+  }
+  .checkout__shipping_summary{
+    margin-top: 44px;
+  }
+}
+@include tablet {
+  .checkout__contact {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    margin: auto;
+    padding: var(--unnamed-size-20) 0;
+    .checkout__contact_form {
+      display: block;
+      margin: auto;
+      .form__input_groups {
+        display: flex;
+        gap: var(--unnamed-size-20);
+        .form__input_grp {
+          input[type="text"] {
+            width: 300px;
+            padding: var(--unnamed-size-6) var(--unnamed-size-2);
+            margin: 5px 0;
+            border: 2px solid var(--gray-l2);
+            border-radius: 8px;
+          }
+          #zipInput {
+            width: 100px !important;
+          }
+        }
+      }
+    }
+    .country__dropdown {
+      width: 300px;
+      padding: 6px 2px;
+      margin: 5px 0;
+      border: 2px solid var(--gray-l2);
+      border-radius: 8px;
+    }
+    .state__dropdown {
+      width: 180px;
+      padding: var(--unnamed-size-6) var(--unnamed-size-2);
+      margin: var(--unnamed-size-6) 0;
+      border: var(--unnamed-size-2) solid var(--gray-l2);
+      border-radius: var(--unnamed-size-8);
+    }
+  }
+}

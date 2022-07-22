@@ -1,0 +1,151 @@
+@import "../../../Css/base";
+@import "../../../Css/mixins";
+@import "../../../Css/aem_grid";
+
+
+.carousel__container {
+    *color: var(--unnamed-color-172026);
+    position: absolute;
+    top: 35%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    padding: 2rem 1.5rem 4.5rem;
+    z-index: 99;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    .carousel__title {
+        font: normal normal 600 40px/44px Source Serif Pro;
+    }
+
+    .carousel__desc {
+        font: normal normal normal 16px/24px Muli;
+        padding: var(--unnamed-size-6) 0;
+    }
+
+    .carousel__btn {
+        color: var(--white);
+        padding: var(--unnamed-size-8) 50px;
+        margin: var(--unnamed-size-8) 0;
+        background-color: var(--primary-brand);
+        border: none;
+
+        &:hover {
+            background-color: var(--primary-d1);
+            cursor: pointer;
+        }
+    }
+}
+
+.carousel__wrapper {
+    height: 400px;
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: block;
+}
+
+.carousel__item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow-prev {
+    left: 30px;
+    position: absolute;
+    top: 35%;
+}
+
+.arrow-next {
+    right: 30px;
+    position: absolute;
+    top: 35%;
+}
+
+[id^="item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('../../../assets/images/men_image_mobile.png') no-repeat center;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 500px;
+}
+
+.item-2 {
+    background: url('../../../assets/images/women_image_mobile.png') no-repeat center;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 500px;
+}
+
+*:target~.item-1 {
+    opacity: 1;
+}
+
+#item-1:target~.item-1 {
+    opacity: 1;
+
+}
+
+#item-2:target~.item-2 {
+    z-index: 3;
+    opacity: 1;
+}
+
+
+
+@include tablet {
+    .item-1 {
+        background: url('../../../assets/images/men_shopping_image.png') no-repeat center;
+        background-size: cover;
+        background-position: 50% 50%;
+        height: auto;
+    }
+
+    .item-2 {
+        background: url('../../../assets/images/women_shopping_image.png') no-repeat center;
+        background-size: cover;
+        background-position: 50% 50%;
+        height: auto;
+    }
+    .arrow-prev {
+        left: 30px;
+        position: absolute;
+        top: 50%;
+    }
+    
+    .arrow-next {
+        right: 30px;
+        position: absolute;
+        top: 50%;
+    }
+
+    .carousel__container {
+        top: 25%;
+        left: 9%;
+        text-align: left;
+        width: 40%;
+        z-index: 99;
+        margin: auto;
+        padding: 0;
+        background: 0;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .carousel__container {  
+        top: 32%;      
+        padding: 1rem 1.5rem 2rem;
+    }
+}

@@ -1,0 +1,120 @@
+@import "../../../Css/base";
+@import "../../../Css/mixins";
+@import "../../../Css/aem_grid";
+
+.checkout_order_success_title {
+    display: table;
+    margin: auto;
+    padding: 1.5rem 0rem;
+    font: normal normal 600 48px/45px Source Serif Pro;
+    color: var(--unnamed-color-172026);
+    &::after {
+      content: "";
+      display: block;
+      border: 5px solid var(--primary-brand);
+      background-color: var(--primary-brand);
+      width: 50%;
+      margin: auto;
+      margin-top: 15px;
+    }
+  }
+.checkout__order_success {
+  display: block;
+  width: 83.5%;
+  margin: auto;
+  padding: var(--unnamed-size-20) 0;
+
+  .checkout__order_number {
+    font-size: 20px;
+    margin-bottom: var(--unnamed-size-16);
+  }
+  .order__shipping_details,
+  .order__shipping_address_payment {
+    display: block;
+    .order__shipping_title {
+      margin: 10px 0px 5px 0px;
+    }
+    .order__shipping_address {
+      color: var(--gray-d1);
+    }
+  }
+
+  .checkout__order_product_info {
+    margin: var(--unnamed-size-10) 0;
+    color: var(--unnamed-color-172026);
+    .order_title {
+      margin: var(--unnamed-size-16) 0;
+    }
+    .order__products {
+      display: block;
+      .order__product_details {
+        display: flex;
+        padding: 8px;
+        gap: var(--unnamed-size-10);
+        margin-right: var(--unnamed-size-20);
+        margin-bottom: var(--unnamed-size-20);
+        box-shadow: 0px 0px 0px 1px var(--gray-l1);
+        .order__product_img {
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+  }
+  .checkout__shipping_method_details {
+    margin: var(--unnamed-size-20) 0;
+  }
+
+  .order__shipment_description .shipment__description {
+    color: var(--unnamed-color-172026);
+    margin: var(--unnamed-size-10) 0;
+    text-align: justify;
+  }
+  .checkout__offer_wrapper {
+    display: none;
+  }
+}
+@include tablet {
+  .checkout__order_success {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 83.5%;
+    margin: auto;
+    grid-gap: 20px;
+    .shipping__information_details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .order__shipping_details,
+    .order__shipping_address_payment {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .checkout__order_product_info {
+      .order__products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .checkout__offer_wrapper {
+      margin-top: 44px;
+      display: block;
+      padding: 1rem;
+      height: 200px;
+      width: 200px;
+      background-color: var(--primary-d1);
+      border: 1px solid var(--gray-l2);
+      border-radius: 2px;
+      color: var(--white);
+      .offer__title{
+        font: normal normal 600 20px/24px Source Serif Pro;
+        margin-bottom: 20px;
+      }
+      .social__icons{
+        @include flex(center, center);
+        gap: 20px;
+        margin: auto;
+      }
+    }
+  }
+}

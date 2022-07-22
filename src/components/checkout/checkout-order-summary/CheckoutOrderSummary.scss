@@ -1,0 +1,126 @@
+@import "../../../Css/base";
+@import "../../../Css/mixins";
+@import "../../../Css/aem_grid";
+
+.checkout__order_summary {
+  display: block;
+  width: 83.5%;
+  margin: auto;
+  padding: var(--unnamed-size-20) 0;
+
+  .checkout__guest_title {
+    font: normal normal 600 36px/30px Source Serif Pro;
+    margin-bottom: var(--unnamed-size-16);
+  }
+
+  .checkout__shipping_information,
+  .checkout__shipping_method_details,
+  .checkout__payment_method_info {
+    padding: 20px;
+    box-shadow: 0px 0px 0px 1px var(--gray-l1);
+
+    .shipping__information_title,
+    .shipping__method__details_title,
+    .payment__method__details_title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      color: var(--unnamed-color-172026);
+
+      .shipping__edit,
+      .payment__edit {
+        display: flex;
+        color: var(--primary-brand);
+
+        &:hover {
+          cursor: pointer;
+          color: var(--primary-d1);
+        }
+      }
+    }
+
+    .shipping__information_details {
+      color: var(--gray-d1);
+    }
+  }
+
+  .checkout__order_summary_info {
+    display: block;
+    padding: var(--unnamed-size-10);
+    margin: var(--unnamed-size-20) 0;
+    gap: var(--unnamed-size-10);
+    box-shadow: 0px 0px 0px 1px var(--gray-l1);
+    color: var(--unnamed-color-172026);
+    .order__products {
+      display: block;
+
+      .order__product_details {
+        display: flex;
+        padding: 8px;
+        gap: var(--unnamed-size-10);
+        box-shadow: 0px 0px 0px 1px var(--gray-l1);
+        .order__product_img {
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+  }
+
+  .checkout__shipping_method_details {
+    margin: var(--unnamed-size-20) 0;
+  }
+
+  .checkout__shipping_button {
+    display: block;
+    margin: auto;
+    color: var(--white);
+    text-align: center;
+    border: var(--unnamed-size-2) solid var(--primary-brand);
+    background-color: var(--primary-brand);
+    padding: var(--unnamed-size-8) 50px;
+    margin-top: var(--unnamed-size-16);
+    text-transform: uppercase;
+
+    &:hover {
+      border: 2px solid var(--primary-d1);
+      background-color: var(--primary-d1);
+      cursor: pointer;
+    }
+  }
+
+  .terms__condition {
+    @include flex(center, center);
+    margin-top: var(--unnamed-size-10);
+    padding: var(--unnamed-size-10) 0;
+    color: var(--unnamed-color-172026);
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  .checkout__payment_summary {
+    margin-top: 44px;
+  }
+}
+
+@include tablet {
+  .checkout__order_summary {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 83.5%;
+    margin: auto;
+    grid-gap: 20px;
+
+    .shipping__information_details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .checkout__order_summary_info {
+      display: inline-flex;
+    }
+  }
+}

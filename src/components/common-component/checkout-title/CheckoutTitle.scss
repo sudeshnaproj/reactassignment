@@ -1,0 +1,16 @@
+.checkout_title {
+    display: table;
+    margin: auto;
+    padding: 1.5rem 0rem;
+    font: normal normal 600 48px/45px Source Serif Pro;
+    color: var(--unnamed-color-172026);
+    &::after {
+      content: "";
+      display: block;
+      border: 5px solid var(--primary-brand);
+      background-color: var(--primary-brand);
+      width: 50%;
+      margin: auto;
+      margin-top: 15px;
+    }
+  }

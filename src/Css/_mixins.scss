@@ -1,0 +1,37 @@
+@import"./variable";
+
+@mixin flex($align-item, $justify-content) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-item;    
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+
+        //@debug "desktop-width: #{$desktop-width}";
+
+        @content;
+    }
+}
+
+@mixin tablet-maxwidth {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$tablet-width + 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop-mdwidth {
+    @media (min-width: #{$desktop-md-width}) {
+
+        //@debug "desktop-width: #{$desktop-md-width}";
+
+        @content;
+    }
+}
+

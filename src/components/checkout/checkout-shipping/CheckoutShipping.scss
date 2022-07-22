@@ -1,0 +1,89 @@
+@import "../../../Css/base";
+@import "../../../Css/mixins";
+@import "../../../Css/aem_grid";
+
+.checkout__shipping {
+  display: block;
+  width: 83.5%;
+  margin: auto;
+  padding: var(--unnamed-size-20) 0;
+
+  .checkout__guest_title {
+    font: normal normal 600 36px/30px Source Serif Pro;
+    margin-bottom: var(--unnamed-size-16);
+  }
+  .checkout__shipping_information {
+    padding: 20px;
+    box-shadow: 0px 0px 0px 1px var(--gray-l1);
+    .shipping__information_title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+      color: var(--unnamed-color-172026);
+      .shipping__edit {
+        display: flex;
+        color: var(--primary-brand);
+        &:hover {
+          cursor: pointer;
+          color: var(--primary-d1);
+        }
+      }
+    }
+    .shipping__information_details {
+      color: var(--gray-d1);
+    }
+  }
+  .checkout__shipping_method {
+    margin: 10px 0;
+    .shipping__method_title {
+      padding: var(--unnamed-size-16)  0;
+      font-size: var(--unnamed-size-20) ;
+      color: var(--unnamed-color-172026);
+    }
+    .shipping_radio_field {
+      color: var(--unnamed-color-172026);
+      padding: var(--unnamed-size-4) var(--unnamed-size-10) ;
+    }
+  }
+  .checkout__shipping_button {
+    display: block;
+    margin: auto;
+    color: var(--primary-brand);
+    text-align: center;
+    border: var(--unnamed-size-2) solid var(--primary-brand);
+    background: transparent;
+    padding: 8px 50px;
+    margin-top: var(--unnamed-size-16);
+    text-transform: uppercase;
+    &:hover{
+        border: 2px solid var(--primary-d1);
+        color: var(--primary-m1);
+        cursor: pointer;
+    }
+  }
+  .checkout__other_option {
+    padding: var(--unnamed-size-20) 0;
+    p {
+      padding: 15px 10px;
+      box-shadow: 0px 0px 0px 1px var(--gray-l1);
+      color: var(--gray-m1);
+    }
+  }
+  .checkout__shipping_summary{
+    margin-top: 44px;
+  }
+}
+@include tablet {
+  .checkout__shipping {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 83.5%;
+    margin: auto;
+    grid-gap: 20px;
+    .shipping__information_details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

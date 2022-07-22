@@ -1,0 +1,48 @@
+@import "../../../Css/base";
+@import "../../../Css/mixins";
+@import "../../../Css/aem_grid";
+
+.footer__wrapper {
+  width: 100%;
+  padding: var(--unnamed-size-20);
+  border: 1px solid var(--gray-l1);
+  .footer__wrapper_container {
+    display: block;
+    margin: auto;
+  }
+
+  .footer__wrapper_links {
+    margin: var(--unnamed-size-10) 0;
+
+    .column_4_title {
+      font-size: 16px;
+      color: var(--unnamed-color-172026);
+    }
+
+    .column_4_desc {
+      color: var(--gray-m1);
+    }
+
+    .footer__list a {
+      font-size: 16px;
+      color: var(--gray-m1);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: var(--unnamed-size-20);
+      padding: var(--unnamed-size-12) 0;
+    }
+  }
+}
+
+@include tablet {
+  .footer__wrapper {
+    .footer__wrapper_container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 83.5%;
+      margin: auto;
+    }
+  }
+}

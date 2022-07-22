@@ -1,0 +1,102 @@
+@import "../../../Css/base";
+@import "../../../Css/mixins";
+@import "../../../Css/aem_grid";
+
+
+.secondary__banner2 {
+
+    .secondary__banner2_map {
+        border-bottom: var(--unnamed-size-6) solid var(--primary-brand);
+        padding-bottom: 5px;
+        text-align: center;
+        width: 70px;
+        position: absolute;
+        z-index: 99;
+        margin-top: -20rem;
+        left: 7%;
+
+        img {
+            filter: invert(1);
+        }
+    }
+
+    .secondary__banner2_content {
+        display: block;
+        background-color: var(--unnamed-color-1B252C);
+        color: var(--white);
+        grid-column: 3/span 1;
+        height: 300px;
+        // padding: 65px 40px;
+        padding: 4rem 2rem;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+
+        .secondary__banner2_title {
+            font: normal normal 600 32px/42px Source Serif Pro;
+        }
+
+        .secondary__banner2_desc {
+            font-size: var(--unnamed-size-18);
+            margin: var(--unnamed-size-6) 0px var(--unnamed-size-16) 0px;
+        }
+
+        .secondary__banner2_button {
+            background-color: transparent;
+            color: var(--white);
+            border: var(--unnamed-size-2) solid var(--white);
+            padding: var(--unnamed-size-8) var(--unnamed-size-28);
+            border-radius: var(--unnamed-size-10);
+
+        }
+
+    }
+
+    .secondary__banner2_image {
+        background-image: url('../../../assets/images/secondary-banner2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 220px;
+    }
+}
+
+
+@include tablet {
+    .secondary__banner2 {
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: var(--unnamed-size-32);
+        width: 83.5%;
+
+
+        .secondary__banner2_image {
+            align-self: center;
+            background: url('../../../assets/images/secondary-banner2.jpg') no-repeat center;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            grid-column: 1/span 2;
+            min-height: 268px;
+            width: 100%;
+        }
+
+        .secondary__banner2_content {
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .secondary__banner2_map {
+            position: absolute;
+            left: 61.5%;
+            margin-top: 14rem;
+        }
+    }
+}
+
+@include desktop {
+    .secondary__banner2 .secondary__banner2_content {
+        padding: 4rem 2rem;
+    }
+}

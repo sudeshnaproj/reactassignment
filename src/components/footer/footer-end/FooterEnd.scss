@@ -1,0 +1,46 @@
+@import "../../../Css/base";
+@import "../../../Css/mixins";
+@import "../../../Css/aem_grid";
+
+.footer__end_wrapper {
+  width: 100%;
+  padding: var(--unnamed-size-20);
+  border: 1px solid var(--gray-l1);
+  .footer__end_container {
+    display: block;
+    margin: auto;
+  }
+
+  .footer__venia_Logo {
+    width: 50%;
+    cursor: pointer;
+  }
+  .footer__copyright {
+    font-size: var(--unnamed-font-size-14);
+    color: var(--gray-m1);
+    cursor: pointer;
+  }
+
+  .footer__terms_condition {
+    display: flex;
+    gap: var(--unnamed-size-20);
+    font-size: var(--unnamed-font-size-14);
+    color: var(--gray-m1);
+    cursor: pointer;
+    padding: 10px 0;
+  }
+}
+
+@include tablet {
+  .footer__end_wrapper {
+    .footer__end_container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      width: 83.5%;
+      margin: auto;
+    }
+    .footer__terms_condition {
+      padding: 0;
+    }
+  }
+}

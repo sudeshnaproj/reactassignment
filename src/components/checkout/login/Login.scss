@@ -1,0 +1,57 @@
+
+
+.login__wrapper {
+    max-width: 668px;
+    width: 100%;
+    margin: auto;
+    background-color: var(--gray-l1);
+    opacity: 1;
+    .login__title {
+        text-align: center;
+        font: normal normal 600 48px/45px Source Serif Pro;
+        padding: var(--unnamed-size-16) 0;
+    }
+    .login__form {
+        max-width: 350px;
+        width: 100%;
+        margin: auto;
+        .login__input input {
+            display: block;
+            padding: var(--unnamed-size-10) var(--unnamed-size-16);
+            margin-bottom: var(--unnamed-size-16);
+            height: 48px;
+            border-radius: var(--unnamed-size-4);
+            border: 1px solid var(--gray-m1);
+            box-shadow: none;
+            width: 100%;
+            font-size: var(--unnamed-size-14);
+            letter-spacing: 0px;
+            color: var(--gray-d1);
+            opacity: 1;
+            &:focus{
+                border: 1px solid var(--gray-d1);
+            }
+            &::placeholder {
+                color: var(--gray-d1);
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+        .login__button {
+            width: 100%;
+            margin: var(--unnamed-size-16) 0 ;
+            font-size: var(--unnamed-size-14);
+            line-height: var(--unnamed-size-24);
+            font-weight: 700;
+            padding: var(--unnamed-size-12) var(--unnamed-size-30);
+            height: 48px;
+            color: #fff;
+            background-color: #354E57;
+            border: none;
+            border-radius: var(--unnamed-size-4);
+            cursor: pointer;
+            text-align: center;
+        }      
+        
+    }
+}
